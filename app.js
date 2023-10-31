@@ -41,13 +41,20 @@ button.addEventListener('click', event => {
   };
   navigator.mediaDevices
     .getUserMedia(constraints)
-    .then(stream => {
+    .then((stream) => {
       currentStream = stream;
-      video.srcObject = stream;
+
+      document.getElementById('arjs-video').srcObject = stream;
+      var event = new CustomEvent("camera-init", { stream: stream });
+      window.dispatchEvent(event);
+
+      document.body.addEventListener("click", function () {
+          document.getElementById('arjs-video').play();
+        });
       return navigator.mediaDevices.enumerateDevices();
     })
     .then(gotDevices)
-    .catch(error => {
+    .catch((error) => {
       console.error(error);
     });
 });
