@@ -29,14 +29,22 @@
     .controls > div:last-child {
       margin-bottom: 0;
     }
+    main {
+      background: #ffffff;
+      min-height: 80vh;
+      flex-grow: 1;
+    }
   </style>
 
   <body style="margin: 0; overflow: hidden;">
+    <main>
     <div class="controls">
       <button id="button">Get camera</button>
       <select id="select">
         <option></option>
       </select>
+    <div/>
+    </main>  
     <a-scene
       vr-mode-ui="enabled: false"
       embedded
