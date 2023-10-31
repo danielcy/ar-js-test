@@ -36,15 +36,7 @@
     }
   </style>
 
-  <body style="margin: 0; overflow: hidden;">
-    <main>
-    <div class="controls">
-      <button id="button">Get camera</button>
-      <select id="select">
-        <option></option>
-      </select>
-    <div/>
-    </main>  
+  <body style="margin: 0; overflow: hidden;"> 
     <a-scene
       vr-mode-ui="enabled: false"
       embedded
@@ -58,6 +50,14 @@
       ></a-text>
       <a-camera gps-camera rotation-reader> </a-camera>
     </a-scene>
+    <main>
+      <div class="controls">
+        <button id="button">Get camera</button>
+        <select id="select">
+          <option></option>
+        </select>
+      <div/>
+    </main> 
     <script src="./app.js"></script>
   </body>
 </html>
