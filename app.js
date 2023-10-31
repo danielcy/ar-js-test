@@ -13,6 +13,7 @@ function gotDevices(mediaDevices) {
   select.innerHTML = '';
   select.appendChild(document.createElement('option'));
   let count = 1;
+  console.log(mediaDevices)
   mediaDevices.forEach(mediaDevice => {
     if (mediaDevice.kind === 'videoinput') {
       const option = document.createElement('option');
