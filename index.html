@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <!-- <head>
+  <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>GeoAR Test</title>
     <script src="./aframe.min.js"></script>
     <script src="./aframe-look-at-component.min.js"></script>
     <script src="./aframe-ar-nft.js"></script>
-  </head> -->
-  <head>
+  </head>
+  <!-- <head>
   <title>AR.js Location V0.0.3</title>
   <script src="./aframe.min.js"></script>
-  <!-- Assumes AR.js build is in the 'AR.js' directory -->
   <script type='text/javascript' src='./ar-threex-location-only.js'></script>
   <script type='text/javascript' src='./aframe-ar.js'></script>
-  </head>
+  </head> -->
 
   <style>
     .controls {
@@ -46,13 +45,7 @@
     }
   </style>
 
-  <body>
-  <!-- 
-  This is using a simulated location. If testing on a mobile device, remove the 
-  'simulateLatitude' and 'simulateLongitude' properties from 'gps-new-camera' and
-  change the 'latitude' and 'longitude' properties to a location around 0.001 
-  degrees from your real location.
-  -->
+  <!-- <body>
   <a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
     <a-camera gps-new-camera='gpsMinDistance: 5;'></a-camera>
     <a-entity material='color: red' geometry='primitive: box' gps-new-entity-place="latitude: 31.212281; longitude: 121.398728" scale="20 20 20"></a-entity>
@@ -68,9 +61,9 @@
       </div>
     <script src="./app.js"></script>
     
-  </body>
+  </body> -->
 
-  <!-- <body style="margin: 0; overflow: hidden;"> 
+  <body style="margin: 0; overflow: hidden;"> 
     <a-scene
       vr-mode-ui="enabled: false"
       embedded
@@ -80,7 +73,7 @@
         value="This content will always face you."
         look-at="[gps-camera]"
         scale="120 120 120"
-        gps-entity-place="latitude: 31.209239; longitude: 121.401770;"
+        gps-entity-place="latitude: 31.212281; longitude: 121.398728;"
       ></a-text>
       <a-camera gps-camera rotation-reader> </a-camera>
     </a-scene>
@@ -89,7 +82,8 @@
         <select id="select">
           <option></option>
         </select>
+        <div id="current-pos"></div>
       </div>
     <script src="./app.js"></script>
-  </body> -->
+  </body>
 </html>
